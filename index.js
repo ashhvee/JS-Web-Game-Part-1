@@ -1,3 +1,4 @@
+//Set a basis for all images
 function newImage(url, left, bottom){
     let pics = document.createElement('img')
     pics.src = url
@@ -8,12 +9,14 @@ function newImage(url, left, bottom){
     return pics
 }
 
+//Pick up new items
 function newItem(url, left, bottom){
-    let object = newImage(url, left, bottom)
-    object.addEventListener('dblclick', () => {
-        object.remove()})
+    let pics = newImage(url, left, bottom)
+    pics.addEventListener('dblclick', () => {
+        pics.remove()})
 }
 
+//All images and items invoked
 newImage('assets/green-character.gif', 100, 100)
 newImage('assets/tree.png', 200, 300)
 newImage('assets/pillar.png', 350, 100)
